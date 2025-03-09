@@ -1,3 +1,4 @@
+
 function toggleDropdown() {
 	document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -9,3 +10,4 @@ function togglePopup() {
 	document.getElementsByTagName("body")[0].classList.toggle("opened-modal");
 	document.getElementsByClassName("modal")[0].classList.toggle("hidden");
 }
+
