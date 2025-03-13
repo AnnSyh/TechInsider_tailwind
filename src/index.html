@@ -52,7 +52,7 @@
 		</div>
 
 		<!-- ----dropdown------ -->
-		<div id="myDropdown" class="sidebar dropdown-content ">
+		<div id="myDropdown" class="sidebar dropdown-content  transition-transform duration-300 ease-in-out transform -translate-x-full">
 			<div  class="flex items-center h-[50px] relative -mt-[15px]  w-[calc(100%-60px)] mx-auto">
 				<button  type="button" class="sidebar-search__layer" onclick="togglePopup();toggleDropdown()"></button> 
 				<svg  xmlns="http://www.w3.org/2000/svg" class="w-[29px] h-[29px]">
@@ -368,7 +368,7 @@
 		</div>
 		<!-- ---/dropdown------- -->
 
-		<nav id="navbar" class="sticky top-0 z-100 bg-[#000] h-[57px] z-10">
+		<nav id="navbar" class="sticky top-0 bg-[#000] h-[57px] z-10">
 			<div class="flex justify-between h-full max-w-[1120px] m-auto px-[10px]">
 				<div class="flex gap-4 items-center">
 					<button title="Меню" onclick="toggleDropdown()"
@@ -750,7 +750,7 @@
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script>
 		// Инициализация Swiper
-		const swiper = new Swiper('.swiper', {
+		let swiper = new Swiper('.swiper', {
 			slidesPerView: 4,  // Показываем по 4 слайда
 			spaceBetween: 20,   // Промежуток между слайдами
 			loop: true, // Зацикливание
@@ -772,23 +772,3 @@
 </body>
 
 </html>
-
-
-<p>Wynwood - отель на Невском проспекте с коллекцией современного искусства, арт-резиденциями, коллаборациями с
-	известными галеристами и выставками. Интерьеры by DA BUREAU и 38 номеров by Choice Interior – с видом на Казанский
-	собор.</p>
-<p><strong>Специальное предложение для Alumni Сколково:</strong></p>
-<ul>
-	<li>⁠скидка 10% на проживание</li>
-</ul>
-<p><strong>Как получить предложение:</strong></p>
-<p>Для получения скидки нужно ввести на <a href="https://m.wynwood.co/" rel="noopener noreferrer" target="_blank">сайте</a> промокод <strong>SKOLKOVO10</strong></p>
-<p><strong>Контакты:</strong></p>
-<p>
-	<a href="tel:+79818408645" rel="noopener noreferrer">+7-981-840-86-45</a><br/>
-	<a href="tel:+79110180022" rel="noopener noreferrer">+7-911-018-00-22</a>
-</p>
-<p><strong>Менеджер:</strong></p>
-<p>Полина Хирвонен</p>
-<p>Отдел продаж</p>
-<p>Сайт <a href="https://m.wynwood.co/" rel="noopener noreferrer" target="_blank">https://m.wynwood.co/</a></p>

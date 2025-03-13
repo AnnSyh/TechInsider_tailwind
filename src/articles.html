@@ -30,9 +30,9 @@
 
 <body>
 	<!-- ----dropdown------ -->
-	<div id="myDropdown" class="sidebar dropdown-content ">
+	<div id="myDropdown" class="sidebar dropdown-content  transition-transform duration-300 ease-in-out transform -translate-x-full">
 		<div  class="flex items-center h-[50px] relative -mt-[15px]  w-[calc(100%-60px)] mx-auto">
-			<button  type="button" class="sidebar-search__layer" onclick="togglePopup()"></button> 
+			<button  type="button" class="sidebar-search__layer" onclick="togglePopup();toggleDropdown()"></button> 
 			<svg  xmlns="http://www.w3.org/2000/svg" class="w-[29px] h-[29px]">
 				<path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" d="M14.2 2.6c4 2.9 5 8.5 2.1 12.6L22 21l-2.1 2.1-5.7-5.7c-3.1 2.2-7.3 2.2-10.4 0-4-2.9-5-8.5-2.1-12.6s8.5-5 12.5-2.2zM2 10c0 3.9 3.1 7 7 7s7-3.1 7-7-3.1-7-7-7-7 3.1-7 7z"/>
 			</svg> 
@@ -346,8 +346,8 @@
 	</div>
 	<!-- ---/dropdown------- -->
 
-	<nav id="navbar" class="sticky top-0 z-100 bg-[#000] h-[57px] z-10">
-		<div class="flex justify-between h-full max-w-[1120px] m-auto">
+	<nav id="navbar" class="sticky top-0 bg-[#000] h-[57px] z-10">
+		<div class="flex justify-between h-full max-w-[1120px] m-auto px-[10px]">
 			<div class="flex gap-4 items-center">
 				<button title="Меню" onclick="toggleDropdown()"
 					class="navbar__burger flex items-center justify-center w-[22px] h-4 text-white text-[22px]">
@@ -1000,7 +1000,6 @@
 		</div>
 		
 
-
 		<footer class="py-[30px] max-w-[1120px] m-auto">
 			<div class="grid md:grid-cols-[232px,1fr] md:gap-x-[50px] max-w-[1120px] max-w-[calc(100%-20px)] m-auto">
 				<div class="ibm-plex-mono flex flex-col justify-between">
@@ -1055,6 +1054,25 @@
 				</div>
 			</div>
 		</footer>
+
+		<div  class="modal fixed inset-0 z-9999 hidden modal_valign_center modal_platform_popmech">
+			<div  class="absolute inset-0 z-2 flex items-start justify-start overflow-y-scroll py-[30px] px-[20px]">
+				<button  type="button" class="bg-black bg-opacity-80 h-full fixed inset-0 z-10"></button>
+				<div  class="flex-0 flex-auto mx-auto max-w-full relative z-20 my-auto">
+					<div  class="text-white mx-auto max-w-full w-[1024px] relative">
+						<div  class="montserrat text-[36px] leading-[1.2] mb-[24px]">Поиск</div> 
+						<button  class="icon-close" onclick="togglePopup()"></button>
+						<form  class="search__form">
+							<input  placeholder="" type="text" class="ibm-plex-mono bg-transparent border border-white rounded-none text-white text-[22px] h-[50px] leading-none px-[16px] w-full">
+						</form>
+						<div  class="text-[15px] leading-[1] mt-[65px] pt-[12px] border-t border-[hsla(0,0%,100%,.3)]">
+							Например:
+							<button  type="button" class="cursor-pointer">Экспедиция на Луну</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<style>
 

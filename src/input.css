@@ -96,13 +96,13 @@ body {
 	}
 }
 
-.dropdown-content {
+/* .dropdown-content {
     display: none;
 
 	&.show {
         display: block;
     }
-}
+} */
 
 .sidebar {
 	background-color: #f3f3f3;

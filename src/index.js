@@ -1,6 +1,7 @@
 
 function toggleDropdown() {
-	document.getElementById("myDropdown").classList.toggle("show");
+	const menu = document.querySelector('#myDropdown');
+    menu.classList.toggle('translate-x-0');
 }
 function toggleSubmenu(number) {
 	document.getElementsByClassName("sidebar-menu__sublink")[number].classList.toggle("hidden");
@@ -9,8 +10,7 @@ function toggleSubmenu(number) {
 	carrentMenuItem.querySelector("svg").classList.toggle("rotate-90");
 }
 function togglePopup() {
-	// document.getElementById("myDropdown").classList.toggle("show");
 	document.getElementsByTagName("body")[0].classList.toggle("opened-modal");
 	document.getElementsByClassName("modal")[0].classList.toggle("hidden");
+	document.getElementsByClassName("sticky")[0].classList.toggle("z-10");
 }
-
