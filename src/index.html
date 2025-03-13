@@ -19,8 +19,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@latest/dist/fancybox.umd.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@latest/dist/fancybox.css" />
 
-	<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+  	<!-- Подключаем CSS Swiper -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 	<script src="../src/index.js"></script>
 
@@ -54,7 +54,7 @@
 		<!-- ----dropdown------ -->
 		<div id="myDropdown" class="sidebar dropdown-content ">
 			<div  class="flex items-center h-[50px] relative -mt-[15px]  w-[calc(100%-60px)] mx-auto">
-				<button  type="button" class="sidebar-search__layer" onclick="togglePopup()"></button> 
+				<button  type="button" class="sidebar-search__layer" onclick="togglePopup();toggleDropdown()"></button> 
 				<svg  xmlns="http://www.w3.org/2000/svg" class="w-[29px] h-[29px]">
 					<path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" d="M14.2 2.6c4 2.9 5 8.5 2.1 12.6L22 21l-2.1 2.1-5.7-5.7c-3.1 2.2-7.3 2.2-10.4 0-4-2.9-5-8.5-2.1-12.6s8.5-5 12.5-2.2zM2 10c0 3.9 3.1 7 7 7s7-3.1 7-7-3.1-7-7-7-7 3.1-7 7z"/>
 				</svg> 
@@ -69,7 +69,7 @@
 			<div >
 				<div line="bottom" class="sidebar-menu">
 					<div  class="sidebar-menu__list">
-						<div  data-name="Новости" class="sidebar-menu__list__item sidebar-menu__list__item_with_subitems hover:bg-[#d8d8d8]">
+						<div  data-name="Новости" class="sidebar-menu__list__item sidebar-menu__list__item_with_subitems hover:bg-[#d8d8d8] transition-margin duration-300">
 							<div  class="flex items-center h-[50px] relative w-[calc(100%-60px)] mx-auto">
 								<a href="#" class="montserrat flex-1 w-0 text-[#000] text-[16px] leading-[20px] ">
 									Новости
@@ -80,7 +80,7 @@
 									</svg>
 								</button>
 							</div>
-							<div  class="sidebar-menu__sublink hidden bg-[#ececec] py-[10px]" style1="display: none;">
+							<div  class="sidebar-menu__sublink hidden bg-[#ececec] py-[10px]">
 								<a  href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Наука</span></a>
 								<a  href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Оружие</span></a>
 								<a  href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Технологии</span></a>
@@ -134,9 +134,9 @@
 									</svg>
 								</button>
 							</div>
-							<div  class="sidebar-menu__sublink hidden" style1="display: none;">
-								<a  href="#" class="sidebar-menu__link --child"><span >Смешно</span></a>
-								<a  href="#" class="sidebar-menu__link --child"><span >Интересно</span></a>
+							<div  class="sidebar-menu__sublink hidden bg-[#ececec] py-[10px]">
+								<a  href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Смешно</span></a>
+								<a  href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Интересно</span></a>
 							</div>
 						</div>
 						<div  data-name="Наука" class="sidebar-menu__list__item sidebar-menu__list__item_with_subitems">
@@ -151,17 +151,17 @@
 								</button>
 							</div>
 
-							<div  class="sidebar-menu__sublink hidden" style1="display: none;">
-								<a href="#" class="sidebar-menu__link --child"><span >Физика</span></a>
-								<a  href="#" class="sidebar-menu__link --child"><span >Вещества</span></a>
-								<a  href="#" class="sidebar-menu__link --child"><span >Астрономия</span></a>
-								<a href="#" class="sidebar-menu__link --child"><span >Земля</span></a>
-								<a  href="#" class="sidebar-menu__link --child"><span >Биология</span></a>
-								<a  href="#" class="sidebar-menu__link --child"><span >Человек</span></a>
-								<a href="#" class="sidebar-menu__link --child"><span >Гуманитарные науки</span></a>
-								<a href="#" class="sidebar-menu__link --child"><span >Математика</span></a>
-								<a href="#" class="sidebar-menu__link --child"><span >Архео и палео</span></a>
-								<a href="#" class="sidebar-menu__link --child"><span >История</span></a>
+							<div  class="sidebar-menu__sublink hidden bg-[#ececec] py-[10px]">
+								<a href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Физика</span></a>
+								<a  href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Вещества</span></a>
+								<a  href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Астрономия</span></a>
+								<a href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Земля</span></a>
+								<a  href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Биология</span></a>
+								<a  href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Человек</span></a>
+								<a href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Гуманитарные науки</span></a>
+								<a href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Математика</span></a>
+								<a href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Архео и палео</span></a>
+								<a href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >История</span></a>
 							</div>
 						</div>
 						<div  data-name="Технологии" class="sidebar-menu__list__item sidebar-menu__list__item_with_subitems">
@@ -175,14 +175,14 @@
 									</svg>
 								</button>
 							</div>
-							<div  class="sidebar-menu__sublink hidden" style1="display: none;">
-								<a href="" class="sidebar-menu__link --child"><span >Роботы</span></a>
-								<a  href="#" class="sidebar-menu__link --child"><span >Космос</span></a>
-								<a href="#" class="sidebar-menu__link --child"><span >Транспорт</span></a>
-								<a href="#" class="sidebar-menu__link --child"><span>Энергетика</span></a>
-								<a href="#" class="sidebar-menu__link --child"><span>Промышленность</span></a>
-								<a href="#" class="sidebar-menu__link --child"><span>Строительство</span></a>
-								<a href="#" class="sidebar-menu__link --child"><span >IT/Игры</span></a>
+							<div  class="sidebar-menu__sublink hidden bg-[#ececec] py-[10px]">
+								<a href="" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Роботы</span></a>
+								<a  href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Космос</span></a>
+								<a href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Транспорт</span></a>
+								<a href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span>Энергетика</span></a>
+								<a href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span>Промышленность</span></a>
+								<a href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span>Строительство</span></a>
+								<a href="#" class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >IT/Игры</span></a>
 							</div>
 						</div>
 						<div  data-name="Сделай сам" class="sidebar-menu__list__item">
@@ -201,18 +201,18 @@
 									</svg>
 								</button>
 							</div>
-							<div  class="sidebar-menu__sublink hidden" style1="display: none;">
+							<div  class="sidebar-menu__sublink hidden bg-[#ececec] py-[10px]">
 								<a
 									 href="#vehicles/moto/"
-									class="sidebar-menu__link --child"><span >Мотоциклы</span></a><a
+									class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Мотоциклы</span></a><a
 									 href="#vehicles/legkovye/"
-									class="sidebar-menu__link --child"><span >Легковые</span></a><a
+									class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Легковые</span></a><a
 									 href="#vehicles/gruzovye/"
-									class="sidebar-menu__link --child"><span >Грузовые</span></a><a
+									class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Грузовые</span></a><a
 									 href="#vehicles/avtobusy/"
-									class="sidebar-menu__link --child"><span >Автобусы</span></a><a
+									class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Автобусы</span></a><a
 									 href="#vehicles/specialnaya-tehnika/"
-									class="sidebar-menu__link --child"><span >Специальная
+									class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Специальная
 										техника</span></a>
 							</div>
 						</div>
@@ -228,26 +228,26 @@
 									</svg>
 								</button>
 								</div>
-							<div  class="sidebar-menu__sublink hidden" style1="display: none;">
+							<div  class="sidebar-menu__sublink hidden bg-[#ececec] py-[10px]">
 								<a
 									 href="#gadgets/mobile-devices/"
-									class="sidebar-menu__link --child"><span >Мобильные
+									class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Мобильные
 										устройства</span></a><a 
 									href="#gadgets/computers/"
-									class="sidebar-menu__link --child"><span >Компьютеры</span></a><a
+									class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Компьютеры</span></a><a
 									 href="#gadgets/domestic-appliances/"
-									class="sidebar-menu__link --child"><span >Бытовая
+									class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Бытовая
 										электроника</span></a><a 
 									href="#gadgets/weird-gadgets/"
-									class="sidebar-menu__link --child"><span >Необычные
+									class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Необычные
 										вещи</span></a><a 
 									href="#gadgets/kuhnya-i-vannaya/"
-									class="sidebar-menu__link --child"><span >Кухня и
+									class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Кухня и
 										ванная</span></a><a 
 									href="#gadgets/chasy/"
-									class="sidebar-menu__link --child"><span >Часы</span></a><a
+									class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Часы</span></a><a
 									 href="#gadgets/igrushki/"
-									class="sidebar-menu__link --child"><span >Игрушки</span></a>
+									class="block text-[17px] leading-[1.2] py-[8px] pl-[40px] pr-[20px] hover:text-[#1c6a65]"><span >Игрушки</span></a>
 							</div>
 						</div>
 						<div  data-name="Биографии" class="sidebar-menu__list__item">
@@ -256,7 +256,7 @@
 									Биографии
 								</a> 
 							</div>
-							<!-- <div  class="sidebar-menu__sublink hidden" style1="display: none;"></div> -->
+							<!-- <div  class="sidebar-menu__sublink hidden"></div> -->
 						</div>
 						<div  data-name="Физический мир 2030" class="sidebar-menu__list__item">
 							<div  class="flex items-center h-[50px] relative w-[calc(100%-60px)] mx-auto">
@@ -461,64 +461,79 @@
 
 
 
-				<div
-					class="col-span-24  md:col-span-6   md:row-span-3 lg:col-span-6  lg:row-span-3  border1 border-red-7001">
+				<div class="col-span-24  md:col-span-6   md:row-span-3 lg:col-span-6  lg:row-span-3  border1 border-red-7001">
 					<!-- grid-template_side -->
 					<div class="flex flex-row gap-x-[10px] md:flex-col md:gap-y-[25px]">
-						<a href="#" class="flex items-center flex-col md:flex-row gap-[10px]">
-							<div class="">
-								<img class="aspect-[1/1] w-[132px] min-w-[132px] max-w-[132px]"
-									src="../images/c9b4b858dcf7c653aae147bd1c02e318_ce_1536x1024x0x0_cropped_600x532.webp"
-									alt="" />
+
+						<div class="swiper">
+							<!-- Обертка слайдов -->
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#" class="flex items-center flex-col md:flex-row gap-[10px]">
+										<div class="">
+											<img class="aspect-[1/1] w-[132px] min-w-[132px] max-w-[132px]"
+												src="../images/c9b4b858dcf7c653aae147bd1c02e318_ce_1536x1024x0x0_cropped_600x532.webp"
+												alt="" />
+										</div>
+										<div class="ibm-plex-mono text-[13px]">
+											Кот Шредингера поможет в создании квантового компьютера
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="flex items-center flex-col md:flex-row gap-[10px]">
+										<div class="">
+											<img class="aspect-[1/1] w-[132px] min-w-[132px] max-w-[132px]"
+												src="../images/c9b4b858dcf7c653aae147bd1c02e318_ce_1536x1024x0x0_cropped_600x532.webp"
+												alt="" />
+										</div>
+										<div class="ibm-plex-mono text-[13px]">
+											Искусственный фотосинтез превращает органические отходы в энергию и
+											лекарства
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="flex items-center flex-col md:flex-row gap-[10px]">
+										<div class="">
+											<img class="aspect-[1/1] w-[132px] min-w-[132px] max-w-[132px]"
+												src="../images/c9b4b858dcf7c653aae147bd1c02e318_ce_1536x1024x0x0_cropped_600x532.webp"
+												alt="" />
+										</div>
+										<div class="ibm-plex-mono text-[13px]">
+											Новый парад планет будет 28 февраля 2025 года! Факты о космическом
+											событии и советы
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="flex items-center flex-col md:flex-row gap-[10px]">
+										<div class="">
+											<img class="aspect-[1/1] w-[132px] min-w-[132px] max-w-[132px]"
+												src="../images/c9b4b858dcf7c653aae147bd1c02e318_ce_1536x1024x0x0_cropped_600x532.webp"
+												alt="" />
+										</div>
+										<div class="ibm-plex-mono text-[13px]">
+											Искусственный фотосинтез превращает органические отходы в энергию и
+											лекарства
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="flex items-center flex-col md:flex-row gap-[10px]">
+										<div class="">
+											<img class="aspect-[1/1] w-[132px] min-w-[132px] max-w-[132px]"
+												src="../images/c9b4b858dcf7c653aae147bd1c02e318_ce_1536x1024x0x0_cropped_600x532.webp"
+												alt="" />
+										</div>
+										<div class="ibm-plex-mono text-[13px]">
+											Новый парад планет будет 28 февраля 2025 года! Факты о космическом
+											событии и советы
+										</div>
+									</a>
+								</div>
 							</div>
-							<div class="ibm-plex-mono text-[13px]">
-								Кот Шредингера поможет в создании квантового компьютера
-							</div>
-						</a>
-						<a href="#" class="flex items-center flex-col md:flex-row gap-[10px]">
-							<div class="">
-								<img class="aspect-[1/1] w-[132px] min-w-[132px] max-w-[132px]"
-									src="../images/c9b4b858dcf7c653aae147bd1c02e318_ce_1536x1024x0x0_cropped_600x532.webp"
-									alt="" />
-							</div>
-							<div class="ibm-plex-mono text-[13px]">
-								Искусственный фотосинтез превращает органические отходы в энергию и
-								лекарства
-							</div>
-						</a>
-						<a href="#" class="flex items-center flex-col md:flex-row gap-[10px]">
-							<div class="">
-								<img class="aspect-[1/1] w-[132px] min-w-[132px] max-w-[132px]"
-									src="../images/c9b4b858dcf7c653aae147bd1c02e318_ce_1536x1024x0x0_cropped_600x532.webp"
-									alt="" />
-							</div>
-							<div class="ibm-plex-mono text-[13px]">
-								Новый парад планет будет 28 февраля 2025 года! Факты о космическом
-								событии и советы
-							</div>
-						</a>
-						<a href="#" class="flex items-center flex-col md:flex-row gap-[10px]">
-							<div class="">
-								<img class="aspect-[1/1] w-[132px] min-w-[132px] max-w-[132px]"
-									src="../images/c9b4b858dcf7c653aae147bd1c02e318_ce_1536x1024x0x0_cropped_600x532.webp"
-									alt="" />
-							</div>
-							<div class="ibm-plex-mono text-[13px]">
-								Искусственный фотосинтез превращает органические отходы в энергию и
-								лекарства
-							</div>
-						</a>
-						<a href="#" class="flex items-center flex-col md:flex-row gap-[10px]">
-							<div class="">
-								<img class="aspect-[1/1] w-[132px] min-w-[132px] max-w-[132px]"
-									src="../images/c9b4b858dcf7c653aae147bd1c02e318_ce_1536x1024x0x0_cropped_600x532.webp"
-									alt="" />
-							</div>
-							<div class="ibm-plex-mono text-[13px]">
-								Новый парад планет будет 28 февраля 2025 года! Факты о космическом
-								событии и советы
-							</div>
-						</a>
+						</div>
 
 					</div>
 
@@ -710,6 +725,70 @@
 	</div>
 
 
+	<style>
+		/* Настройка размеров контейнера Swiper */
+		.swiper {
+			width: 100%;
+			height: 250px;
+			padding-bottom: 30px;
+			z-index: 0;
+		}
+
+        /* Медиа-запрос для отображения списка на экранах шире 678px */
+        @media (min-width: 768px) {
+            .swiper {
+				height: auto;
+            }
+			.swiper-wrapper {
+				display: block; 
+			}
+
+        }
+	</style>
+
+	<!-- Подключаем JS Swiper -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script>
+		// Инициализация Swiper
+		const swiper = new Swiper('.swiper', {
+			slidesPerView: 4,  // Показываем по 4 слайда
+			spaceBetween: 20,   // Промежуток между слайдами
+			loop: true, // Зацикливание
+		});
+
+		window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                swiper.destroy();
+            } else {
+				swiper = new Swiper('.swiper', {
+					slidesPerView: 4,  // Показываем по 4 слайда
+					spaceBetween: 20,   // Промежуток между слайдами
+					loop: true, // Зацикливание
+				});
+            }
+        });
+	</script>
+
 </body>
 
 </html>
+
+
+<p>Wynwood - отель на Невском проспекте с коллекцией современного искусства, арт-резиденциями, коллаборациями с
+	известными галеристами и выставками. Интерьеры by DA BUREAU и 38 номеров by Choice Interior – с видом на Казанский
+	собор.</p>
+<p><strong>Специальное предложение для Alumni Сколково:</strong></p>
+<ul>
+	<li>⁠скидка 10% на проживание</li>
+</ul>
+<p><strong>Как получить предложение:</strong></p>
+<p>Для получения скидки нужно ввести на <a href="https://m.wynwood.co/" rel="noopener noreferrer" target="_blank">сайте</a> промокод <strong>SKOLKOVO10</strong></p>
+<p><strong>Контакты:</strong></p>
+<p>
+	<a href="tel:+79818408645" rel="noopener noreferrer">+7-981-840-86-45</a><br/>
+	<a href="tel:+79110180022" rel="noopener noreferrer">+7-911-018-00-22</a>
+</p>
+<p><strong>Менеджер:</strong></p>
+<p>Полина Хирвонен</p>
+<p>Отдел продаж</p>
+<p>Сайт <a href="https://m.wynwood.co/" rel="noopener noreferrer" target="_blank">https://m.wynwood.co/</a></p>
